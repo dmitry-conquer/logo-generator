@@ -78,6 +78,7 @@ document.addEventListener("DOMContentLoaded", (): void => {
     apiKey: import.meta.env.API_KEY,
     dangerouslyAllowBrowser: true,
   });
+  console.log("API_KEY", import.meta.env.API_KEY);
 
   const setStatus = (message: string) => {
     statusMessage.textContent = message;
