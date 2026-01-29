@@ -44,7 +44,8 @@ const buildPrompt = (
     : "No reference notes provided.";
 
   return [
-    "Create ONLY a logo (no mockups, no background, no 3D scenes).",
+    "Create ONLY a logo (no mockups, no 3D scenes).",
+    "Place the logo on a solid background so it doesn't blend into the page background.",
     `Organization name: ${organization.trim()}.`,
     `Logo type: ${LOGO_TYPE_LABELS[logoType]}.`,
     industryLine,
@@ -78,7 +79,6 @@ document.addEventListener("DOMContentLoaded", (): void => {
     apiKey: import.meta.env.API_KEY,
     dangerouslyAllowBrowser: true,
   });
-  console.log("API_KEY", import.meta.env.API_KEY);
 
   const setStatus = (message: string) => {
     statusMessage.textContent = message;
