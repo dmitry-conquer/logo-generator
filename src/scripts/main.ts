@@ -45,7 +45,6 @@ const buildPrompt = (
 
   return [
     "Create ONLY a logo (no mockups, no 3D scenes).",
-    "Place the logo on a solid background so it doesn't blend into the page background.",
     `Organization name: ${organization.trim()}.`,
     `Logo type: ${LOGO_TYPE_LABELS[logoType]}.`,
     industryLine,
@@ -57,6 +56,7 @@ const buildPrompt = (
     "The result must be just the logo.",
   ].join(" ");
 };
+
 
 const getLogoTypeValue = (value: string): LogoType => {
   if (value === "icon") return "icon";
