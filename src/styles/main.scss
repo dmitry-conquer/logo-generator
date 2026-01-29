@@ -1,0 +1,206 @@
+@use "core" as *;
+
+body {
+  background: linear-gradient(275.64deg, #001253 0.87%, #930007 98.32%);
+  color: #fff;
+  min-height: 100vh;
+}
+
+.site-main {
+  padding: 64px 16px 96px;
+}
+
+.logo-generator {
+  max-width: 980px;
+  margin: 0 auto;
+  background: rgba(2, 11, 44, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.logo-generator__header {
+  margin-bottom: 28px;
+}
+
+.logo-generator__title {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.logo-generator__subtitle {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.logo-generator__form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.logo-generator__section {
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(2, 11, 44, 0.55);
+}
+
+.logo-generator__section-title {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.logo-generator__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field--full {
+  grid-column: 1 / -1;
+}
+
+.field__label {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.field__input {
+  background: #020b2c;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 12px;
+  color: #fff;
+  padding: 12px 14px;
+  font-size: 15px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field__input:focus {
+  outline: none;
+  border-color: #d8000e;
+  box-shadow: 0 0 0 2px rgba(216, 0, 14, 0.3);
+}
+
+.field__textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.pill-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(2, 11, 44, 0.9);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.pill input {
+  accent-color: #d8000e;
+}
+
+.logo-generator__preview {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: center;
+}
+
+.logo-generator__preview-box {
+  position: relative;
+  min-height: 240px;
+  border-radius: 18px;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  background: rgba(2, 11, 44, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.logo-generator__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: none;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.logo-generator__image.is-visible {
+  display: block;
+}
+
+.logo-generator__placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  padding: 16px;
+}
+
+.logo-generator__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.logo-generator__status {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.button {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.button:hover {
+  border-color: #fff;
+}
+
+.button--accent {
+  background: #d8000e;
+  border-color: #d8000e;
+}
+
+.button--accent:hover {
+  background: #b6000c;
+  border-color: #b6000c;
+}
+
+@media (max-width: 720px) {
+  .logo-generator {
+    padding: 24px;
+  }
+
+  .logo-generator__preview {
+    grid-template-columns: 1fr;
+  }
+
+  .logo-generator__actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
+    <title>Home page</title>
+  </head>
+  <body>
+    <div id="page" class="site-page">
+      <a class="sr-only" href="#primary">Skip to content</a>
+      {{> header}}
+      <main id="primary" class="site-main">
+        <section class="logo-generator">
+          <div class="logo-generator__header">
+            <h1 class="logo-generator__title">Logo Project Request</h1>
+            <p class="logo-generator__subtitle">
+              Submit your details and generate a logo reference that fits your
+              brand.
+            </p>
+          </div>
+
+          <form id="logoForm" class="logo-generator__form">
+            <div class="logo-generator__section">
+              <h2 class="logo-generator__section-title">Contact details</h2>
+              <div class="logo-generator__grid">
+                <label class="field">
+                  <span class="field__label">Full name</span>
+                  <input
+                    class="field__input"
+                    type="text"
+                    name="fullName"
+                    placeholder="Your name"
+                    autocomplete="name"
+                  />
+                </label>
+
+                <label class="field">
+                  <span class="field__label">Email</span>
+                  <input
+                    class="field__input"
+                    type="email"
+                    name="email"
+                    placeholder="name@example.com"
+                    autocomplete="email"
+                  />
+                </label>
+
+                <label class="field">
+                  <span class="field__label">Phone</span>
+                  <input
+                    class="field__input"
+                    type="tel"
+                    name="phone"
+                    placeholder="+1 555 123 4567"
+                    autocomplete="tel"
+                  />
+                </label>
+              </div>
+            </div>
+
+            <div class="logo-generator__section">
+              <h2 class="logo-generator__section-title">Brand details</h2>
+              <div class="logo-generator__grid">
+                <label class="field">
+                  <span class="field__label">Organization name</span>
+                  <input
+                    class="field__input"
+                    type="text"
+                    name="organization"
+                    placeholder="For example, Stellar Studio"
+                    required
+                  />
+                </label>
+
+                <label class="field">
+                  <span class="field__label">Industry</span>
+                  <input
+                    class="field__input"
+                    type="text"
+                    name="industry"
+                    placeholder="e.g., Fashion, SaaS, Food"
+                  />
+                </label>
+
+                <label class="field">
+                  <span class="field__label">Website / social link</span>
+                  <input
+                    class="field__input"
+                    type="url"
+                    name="website"
+                    placeholder="https://"
+                  />
+                </label>
+              </div>
+            </div>
+
+            <div class="logo-generator__section">
+              <h2 class="logo-generator__section-title">Logo preferences</h2>
+              <div class="logo-generator__grid">
+                <label class="field">
+                  <span class="field__label">Logo type</span>
+                  <select class="field__input" name="logoType" required>
+                    <option value="text">Text only</option>
+                    <option value="icon">Icon only</option>
+                    <option value="text-icon">Text and icon</option>
+                  </select>
+                </label>
+
+                <label class="field">
+                  <span class="field__label">Timeline</span>
+                  <select class="field__input" name="timeline">
+                    <option value="">Select</option>
+                    <option value="asap">ASAP (1-2 weeks)</option>
+                    <option value="month">This month</option>
+                    <option value="quarter">This quarter</option>
+                  </select>
+                </label>
+
+                <label class="field">
+                  <span class="field__label">Budget</span>
+                  <select class="field__input" name="budget">
+                    <option value="">Select</option>
+                    <option value="starter">$300 - $600</option>
+                    <option value="growth">$600 - $1,200</option>
+                    <option value="premium">$1,200+</option>
+                  </select>
+                </label>
+
+                <div class="field field--full">
+                  <span class="field__label">Style direction</span>
+                  <div class="pill-group">
+                    <label class="pill">
+                      <input type="checkbox" name="style" value="minimal" />
+                      Minimal
+                    </label>
+                    <label class="pill">
+                      <input type="checkbox" name="style" value="luxury" />
+                      Luxury
+                    </label>
+                    <label class="pill">
+                      <input type="checkbox" name="style" value="playful" />
+                      Playful
+                    </label>
+                    <label class="pill">
+                      <input type="checkbox" name="style" value="tech" /> Tech
+                    </label>
+                    <label class="pill">
+                      <input type="checkbox" name="style" value="vintage" />
+                      Vintage
+                    </label>
+                    <label class="pill">
+                      <input type="checkbox" name="style" value="handcrafted" />
+                      Handcrafted
+                    </label>
+                  </div>
+                </div>
+
+                <div class="field field--full">
+                  <span class="field__label">Preferred colors</span>
+                  <div class="pill-group">
+                    <label class="pill">
+                      <input type="checkbox" name="colors" value="black-white" />
+                      Black & White
+                    </label>
+                    <label class="pill">
+                      <input type="checkbox" name="colors" value="red" /> Red
+                    </label>
+                    <label class="pill">
+                      <input type="checkbox" name="colors" value="blue" /> Blue
+                    </label>
+                    <label class="pill">
+                      <input type="checkbox" name="colors" value="green" />
+                      Green
+                    </label>
+                    <label class="pill">
+                      <input type="checkbox" name="colors" value="warm" /> Warm
+                    </label>
+                    <label class="pill">
+                      <input type="checkbox" name="colors" value="cool" /> Cool
+                    </label>
+                  </div>
+                </div>
+
+                <label class="field field--full">
+                  <span class="field__label">Logo preferences</span>
+                  <textarea
+                    class="field__input field__textarea"
+                    name="wishes"
+                    rows="4"
+                    placeholder="Tone, symbols, do's and don'ts..."
+                  ></textarea>
+                </label>
+              </div>
+            </div>
+
+            <div class="logo-generator__section">
+              <h2 class="logo-generator__section-title">Reference inspiration</h2>
+              <div class="logo-generator__grid">
+                <label class="field field--full">
+                  <span class="field__label">Reference links</span>
+                  <input
+                    class="field__input"
+                    type="url"
+                    name="references"
+                    placeholder="https://dribbble.com/... or https://behance.net/..."
+                  />
+                </label>
+
+                <label class="field field--full">
+                  <span class="field__label">What do you like about them?</span>
+                  <textarea
+                    class="field__input field__textarea"
+                    name="referenceNotes"
+                    rows="3"
+                    placeholder="Typography, spacing, symbol, vibe..."
+                  ></textarea>
+                </label>
+              </div>
+            </div>
+
+            <div class="logo-generator__preview">
+              <div class="logo-generator__preview-box">
+                <img
+                  id="logoPreview"
+                  class="logo-generator__image"
+                  src=""
+                  alt="Generated logo"
+                />
+                <div id="logoPlaceholder" class="logo-generator__placeholder">
+                  The logo will appear here after generation
+                </div>
+              </div>
+              <button
+                id="generateLogo"
+                class="button button--accent"
+                type="button"
+              >
+                Generate reference logo
+              </button>
+            </div>
+
+            <div class="logo-generator__actions">
+              <button class="button" type="submit">Submit request</button>
+              <span id="statusMessage" class="logo-generator__status"></span>
+            </div>
+          </form>
+        </section>
+      </main>
+      {{> footer}}
+    </div>
+    <script type="module" src="/src/scripts/main.ts" defer></script>
+  </body>
+</html>

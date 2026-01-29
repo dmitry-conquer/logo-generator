@@ -1,0 +1,62 @@
+@use "functions" as *;
+@use "breakpoints" as *;
+
+@mixin x-large {
+  @media (max-width: rem($x-large)) {
+    @content;
+  }
+}
+@mixin large {
+  @media (max-width: rem($large)) {
+    @content;
+  }
+}
+@mixin medium {
+  @media (max-width: rem($medium)) {
+    @content;
+  }
+}
+@mixin small {
+  @media (max-width: rem($small)) {
+    @content;
+  }
+}
+@mixin x-small {
+  @media (max-width: rem($x-small)) {
+    @content;
+  }
+}
+
+@mixin above-x-large {
+  @media (min-width: rem($x-large + 0.02)) {
+    @content;
+  }
+}
+@mixin above-large {
+  @media (min-width: rem($large + 0.02)) {
+    @content;
+  }
+}
+@mixin above-medium {
+  @media (min-width: rem($medium + 0.02)) {
+    @content;
+  }
+}
+@mixin above-small {
+  @media (min-width: rem($small + 0.02)) {
+    @content;
+  }
+}
+@mixin above-x-small {
+  @media (min-width: rem($x-small + 0.02)) {
+    @content;
+  }
+}
+
+@mixin hover() {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @content;
+    }
+  }
+}

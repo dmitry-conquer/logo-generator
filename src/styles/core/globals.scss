@@ -1,0 +1,78 @@
+@use "helpers" as *;
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
+body {
+  font-size: 1rem;
+  font-family: var(--font-family-base);
+  color: var(--color-black);
+  background-color: var(--color-white);
+  line-height: 1.5;
+}
+
+// ===========================
+// 📐 CONTAINER & LAYOUT
+// ===========================
+
+.site-page {
+  overflow: hidden;
+  position: relative;
+}
+
+.container {
+  max-width: var(--container-width);
+  padding-inline: var(--container-padding-x);
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: var(--section-padding-y);
+}
+
+// ===========================
+// ✒️ TYPOGRAPHY
+// ===========================
+
+h1,
+.heading-xl {
+}
+
+h2,
+.heading-lg {
+}
+
+h3,
+.heading-md {
+}
+
+h4,
+.heading-sm {
+}
+
+h5,
+.heading-xs {
+}
+
+p,
+.text-base {
+}
+
+a:not([class]) {
+  @include hover {
+    text-decoration: underline;
+  }
+}
+
+p:not([class]):not(:last-of-type) {
+  margin-bottom: rem(16);
+}
+
+@include large {
+  br {
+    display: none !important;
+  }
+}
